@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - PEHABIT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .page-title { text-align: center; }
+        .page-title span { color: #111111; }
+        .page-title .accent { color: #ff6b35; }
+        /* Terms-like content styling */
+        .main-content { padding: 80px 0; background: #f8f9fa; }
+        .content-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideInUp 0.8s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+        }
+        .content-section h2 { color: #333; font-size: 2rem; margin-bottom: 20px; }
+        .content-section h3 { color: #ff6b35; font-size: 1.3rem; margin: 25px 0 15px 0; }
+        .content-section p { line-height: 1.8; color: #666; margin-bottom: 15px; }
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Page hero like terms */
+        .page-hero {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+        }
+        .page-hero .hero-content { text-align: center; position: relative; z-index: 1; }
+        .page-hero h1 { font-size: 4rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .page-hero p { font-size: 1.1rem; opacity: 0.95; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Our Services</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fas fa-rotate-left"></i> Refund Policy</h1>
+                <p>Please read this refund policy carefully</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-section">
+                <p>PeHabit shall create User ID in its system only Post Successful KYC verification of such user , If the user is unable to get successful KYC done, PeHabit shall not be able to create User ID of such user .Thus, in order to avail PeHabit Portal services, user has to mandatory get his successful KYC verification done. Post user ID creation, Once a value is debited from your payment instrument/bank account and you have received the same value in your id, there is no cancellation or refund permitted for such transaction. However, if in a transaction performed by You on the PeHabit Platform, money has been charged to Your card or bank account and a value is not delivered within 24 hours of the completion of the transaction, then You shall inform us by sending an e mail to our customer services e mail address mentioned on the Contact Us page on the PeHabit Platform. Please include in the e-mail the following details value, transaction date and order number. PeHabit will investigate the incident and, if it is found that money was indeed charged to Your card or bank account without delivery of the value, then You will be refunded the money within 21 working days from the date of receipt of Your e mail. All refunds will be credited to the instrument that was charged.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+                    </div>
+                    <p>We are locally based and understand the needs of our customers, their operating environments, and the unique features of each institution.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9667002287</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@pehabit.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>B-2/11 Mohan Co-operative Industrial Area Behind Badarpur Border Metro Station 110044</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Condition</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2022-24 PeHabit | All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

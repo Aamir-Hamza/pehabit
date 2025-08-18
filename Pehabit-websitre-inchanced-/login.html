@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - PEHABIT</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="login.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Main Navigation -->
+	<nav class="main-nav">
+		<div class="container">
+			<div class="logo">
+				<img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+			</div>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html#services">Our Services</a></li>
+				<li><a href="index.html#about">About Us</a></li>
+				<li><a href="login.html" class="active">Login</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Login Section -->
+	<section class="login-section">
+		<div class="container">
+			<div class="login-container">
+				<div class="login-header">
+					<div class="login-logo">
+						<img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+						<h2>PEHABIT</h2>
+					</div>
+					<h3>Welcome Back!</h3>
+					<p>Sign in to your account to continue</p>
+				</div>
+
+				<div class="login-form">
+					<form id="loginForm" action="#" method="post">
+						<div class="form-group">
+							<label for="email">
+								<i class="fas fa-envelope"></i>
+								Email
+							</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<label for="password">
+								<i class="fas fa-lock"></i>
+								Password
+							</label>
+							<div class="password-input">
+								<input type="password" id="password" name="password" required>
+								<button type="button" class="toggle-password" onclick="togglePassword()">
+									<i class="fas fa-eye"></i>
+								</button>
+							</div>
+						</div>
+						<button type="submit" class="login-btn">
+							<i class="fas fa-sign-in-alt"></i>
+							Sign In
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section">
+					<div class="footer-logo">
+						<img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+					</div>
+					<p>We are locally based and understand the needs of our customers, their operating environments, and the unique features of each institution.</p>
+				</div>
+				
+				<div class="footer-section">
+					<h4>Address</h4>
+					<div class="contact-item">
+						<i class="fas fa-phone"></i>
+						<span>9667002287</span>
+					</div>
+					<div class="contact-item">
+						<i class="fas fa-envelope"></i>
+						<span>info@pehabit.com</span>
+					</div>
+					<div class="contact-item">
+						<i class="fas fa-map-marker-alt"></i>
+						<span>B-2/11 Mohan Co-operative Industrial Area Behind Badarpur Border Metro Station 110044</span>
+					</div>
+				</div>
+				
+				<div class="footer-section">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="index.html#about">About Us</a></li>
+						<li><a href="privacy-policy.html">Privacy Policy</a></li>
+						<li><a href="terms-conditions.html">Terms & Condition</a></li>
+						<li><a href="refund-policy.html">Refund Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<p>&copy; Copyright 2022-24 PeHabit | All Right Reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+	<script>
+	function togglePassword() {
+		var input = document.getElementById('password');
+		var icon = document.querySelector('.toggle-password i');
+		if (!input) return;
+		if (input.type === 'password') {
+			input.type = 'text';
+			if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
+		} else {
+			input.type = 'password';
+			if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
+		}
+	}
+	</script>
+</body>
+</html> 

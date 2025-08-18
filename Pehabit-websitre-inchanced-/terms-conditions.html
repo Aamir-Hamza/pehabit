@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - PEHABIT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Top Header */
+        .top-header {
+            background: #ff6b35;
+            color: white;
+            padding: 1px 0;
+            font-size: 8px;
+        }
+        .top-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .business-hours, .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        @media (max-width: 768px) {
+            .top-header .container {
+                flex-direction: column;
+                gap: 1px;
+                text-align: center;
+            }
+            .business-hours, .contact-info {
+                font-size: 6px;
+            }
+        }
+        @media (max-width: 480px) {
+            .top-header {
+                padding: 0.5px 0;
+                font-size: 6px;
+            }
+            .business-hours, .contact-info {
+                font-size: 5px;
+                gap: 2px;
+            }
+        }
+
+        /* Terms Hero Section */
+        .terms-hero {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .terms-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        .terms-hero-content {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 10;
+        }
+        .terms-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: slideInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .terms-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.2s both;
+        }
+
+        /* Common Section Styles */
+        .terms-content {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .terms-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideInUp 0.8s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        .terms-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+        }
+        .terms-section h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .terms-section h3 {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
+        }
+        .terms-section p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to   { transform: translateY(0);   opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33%      { transform: translateY(-20px) rotate(1deg); }
+            66%      { transform: translateY(20px)  rotate(-1deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Our Services</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Terms Hero -->
+    <section class="terms-hero">
+        <div class="container">
+            <div class="terms-hero-content">
+                <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+                <p>Please read these terms carefully before using our services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container">
+
+            <!-- CARD 1 START -->
+            <div class="terms-section">
+                <h2>Terms of Use & Service</h2>
+                <p>Terms of Use & Service needs to be read, understood & agreed by a user before initiating any kind of transaction with us. This web site, www.Pehabit.com is published and maintained by PeHabit Fintech Pvt. Ltd. When the user accesses, browses or uses this website, User accepts, without limitation or qualification, the terms and conditions set forth herein below. When the User accesses any other website through this website, then such other website may have its own terms and conditions of use which is specific to such other website. These Terms of use and any additional terms posted on this website together constitute the entire agreement between PeHabit and the User with respect to use of this website. In the case of any violation of these terms and conditions, PeHabit reserves its rights to seek all remedies available in law and in equity for such violations.</p>
+
+                <h3>Site and its Contents</h3>
+                <p>All materials provided on this website are only for the specific purpose only. User shall not distribute exchange, modify, sell or transmit anything that User copy from this website, including but not limited to any text, images, audio and video, for any business, commercial or public purpose...</p>
+
+                <h3>Ownership</h3>
+                <p>All materials on this website, including but not limited to audio, images, software, text, icons and such like...</p>
+
+                <h3>Devices</h3>
+                <p>The user agrees that user will not use any robot, spider, other automatic device, or manual process to monitor or copy our web pages...</p>
+
+                <h3>Transmitted Material</h3>
+                <p>Internet transmissions are never completely private or secure...</p>
+
+                <h3>Modifications</h3>
+                <p>PeHabit may add to, change or remove any part of these terms and conditions at any time...</p>
+            </div>
+            <!-- CARD 1 END -->
+            <!-- CARD 2 START -->
+            <div class="terms-section">
+                <h2>PeHabit Recharges</h2>
+                <p>PeHabit is providing recharge services of various prepaid and postpaid mobile phones, DTH just as a reseller only. PeHabit is not a telecommunication company/service provider ... (include full same paragraph here until end of that section)</p>
+
+                <h3>User's Obligations</h3>
+                <p><strong>General Obligations:</strong> The User shall access the site only for lawful and specific purpose(s) for which he/she has opted for and User shall be responsible for complying with all applicable laws...</p>
+
+                <p><strong>Information Provided:</strong> The information provided by the User in the Registration page must be complete and accurate....</p>
+
+                <p><strong>Use of the Services:</strong> User may only use this service to make legitimate transaction / payments. Without limitation...</p>
+
+                <p><strong>User Responsibility:</strong> The User confirms to us that User is 18 years of age or above and has the legal capacity...</p>
+
+                <p><strong>Avoid double booking:</strong> If User tried to make an online transaction and due to some technical error, User did not get any payment confirmation...</p>
+
+                <p><strong>Disclaimer:</strong> The material displayed on this website could include technical inaccuracies or typographical errors...</p>
+
+                <p><strong>Safety of data downloaded:</strong> The User understands and agrees that availing any of the services through this website or any material and/or data downloaded...</p>
+            </div>
+            <!-- CARD 2 END -->
+
+            <!-- CARD 3 START -->
+            <div class="terms-section">
+                <h2>Relationship</h2>
+                <p>None of the provisions of any agreement, terms and conditions, notices, or the right to use this website by the User contained herein or any other section or pages of this website, shall be deemed to constitute a partnership...</p>
+
+                <h3>Jurisdiction</h3>
+                <p>PeHabit hereby expressly disclaims any implied warranties imputed by the laws of any jurisdiction or country other than those...</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>Notwithstanding anything to the contrary contained herein, neither PeHabit (PeHabit Fintech Pvt. Ltd.), nor its affiliated companies...</p>
+
+                <h3>Indemnification</h3>
+                <p>User shall defend, indemnify, and hold harmless PeHabit and its affiliates, officers, agents, representatives and employees from and against all claims...</p>
+
+                <h3>Dispute Resolution</h3>
+                <p>User agrees that any dispute arising out of, use of this website or availing PeHabit services, shall be first resolved by amicable means...</p>
+
+                <h3>Termination</h3>
+                <p>User agrees that PeHabit shall have all the rights to suspend or terminate User's account wholly or partly or usage of services and/or User's profile at any time...</p>
+            </div>
+            <!-- CARD 3 END -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+                    </div>
+                    <p>We are locally based and understand the needs of our customers, their operating environments, and the unique features of each institution.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9667002287</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@pehabit.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>B-2/11 Mohan Co-operative Industrial Area Behind Badarpur Border Metro Station 110044</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Condition</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2022-24 PeHabit | All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
