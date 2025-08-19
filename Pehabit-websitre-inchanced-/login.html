@@ -1,136 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login - PEHABIT</title>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="login.css">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEHABIT - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS Animation for Logo */
+        .logo-animate {
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .logo-animate:hover {
+          transform: scale(1.15) rotate(-8deg);
+          filter: drop-shadow(0 0 10px orange);
+        }
+
+        /* Login Form Specific Styles */
+        .login-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background: #f5f5f5;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .required {
+            color: #ff0000;
+            margin-left: 2px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #999;
+        }
+
+        .login-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #0056b3;
+        }
+
+        .forgot-password {
+            margin-top: 20px;
+        }
+
+        .forgot-link {
+            color: #333;
+            text-decoration: underline;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-link:hover {
+            color: #007bff;
+        }
+
+
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+                margin: 0 20px;
+            }
+            
+            .login-title {
+                font-size: 28px;
+            }
+            
+            .form-input {
+                padding: 10px 14px;
+            }
+            
+            .login-btn {
+                padding: 12px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<!-- Main Navigation -->
-	<nav class="main-nav">
-		<div class="container">
-			<div class="logo">
-				<img src="logo.png" alt="Logo" style="height:50px; width:auto;">
-			</div>
-			<div class="hamburger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<ul class="nav-links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="index.html#services">Our Services</a></li>
-				<li><a href="index.html#about">About Us</a></li>
-				<li><a href="login.html" class="active">Login</a></li>
-			</ul>
-		</div>
-	</nav>
+    <!-- Top Header Bar -->
+    <div class="top-header">
+        <div class="container">
+            <div class="business-hours">
+                <i class="fas fa-clock"></i>
+                <span>Mon-Fri 09:00-17:00</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <span>966-700-2287</span>
+            </div>
+        </div>
+    </div>
 
-	<!-- Login Section -->
-	<section class="login-section">
-		<div class="container">
-			<div class="login-container">
-				<div class="login-header">
-					<div class="login-logo">
-						<img src="logo.png" alt="Logo" style="height:50px; width:auto;">
-						<h2>PEHABIT</h2>
-					</div>
-					<h3>Welcome Back!</h3>
-					<p>Sign in to your account to continue</p>
-				</div>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo logo-animate" style="display: flex; align-items: center; gap: 10px;">
+                <img src="logo.png" alt="Logo" class="logo-animate" style="height:50px; width:auto;">
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Our Services</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
+        </div>
+    </nav>
 
-				<div class="login-form">
-					<form id="loginForm" action="#" method="post">
-						<div class="form-group">
-							<label for="email">
-								<i class="fas fa-envelope"></i>
-								Email
-							</label>
-							<input type="email" id="email" name="email" required>
-						</div>
-						<div class="form-group">
-							<label for="password">
-								<i class="fas fa-lock"></i>
-								Password
-							</label>
-							<div class="password-input">
-								<input type="password" id="password" name="password" required>
-								<button type="button" class="toggle-password" onclick="togglePassword()">
-									<i class="fas fa-eye"></i>
-								</button>
-							</div>
-						</div>
-						<button type="submit" class="login-btn">
-							<i class="fas fa-sign-in-alt"></i>
-							Sign In
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2 class="login-title">Login</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username: <span class="required">*</span></label>
+                    <input type="text" id="username" name="username" class="form-input" placeholder="Enter your username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password: <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+                
+                <div class="forgot-password">
+                    <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </section>
 
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="footer-content">
-				<div class="footer-section">
-					<div class="footer-logo">
-						<img src="logo.png" alt="Logo" style="height:50px; width:auto;">
-					</div>
-					<p>We are locally based and understand the needs of our customers, their operating environments, and the unique features of each institution.</p>
-				</div>
-				
-				<div class="footer-section">
-					<h4>Address</h4>
-					<div class="contact-item">
-						<i class="fas fa-phone"></i>
-						<span>9667002287</span>
-					</div>
-					<div class="contact-item">
-						<i class="fas fa-envelope"></i>
-						<span>info@pehabit.com</span>
-					</div>
-					<div class="contact-item">
-						<i class="fas fa-map-marker-alt"></i>
-						<span>B-2/11 Mohan Co-operative Industrial Area Behind Badarpur Border Metro Station 110044</span>
-					</div>
-				</div>
-				
-				<div class="footer-section">
-					<h4>Quick Links</h4>
-					<ul>
-						<li><a href="index.html#about">About Us</a></li>
-						<li><a href="privacy-policy.html">Privacy Policy</a></li>
-						<li><a href="terms-conditions.html">Terms & Condition</a></li>
-						<li><a href="refund-policy.html">Refund Policy</a></li>
-					</ul>
-				</div>
-			</div>
-			
-			<div class="footer-bottom">
-				<p>&copy; Copyright 2022-24 PeHabit | All Right Reserved.</p>
-			</div>
-		</div>
-	</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Logo" style="height:50px; width:auto;">
+                    </div>
+                    <p>We are locally based and understand the needs of our customers, their operating environments, and the unique features of each institution.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9667002287</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@pehabit.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>B-2/11 Mohan Co-operative Industrial Area Behind Badarpur Border Metro Station 110044</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Condition</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2022-24 PeHabit | All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-	<script src="script.js"></script>
-	<script>
-	function togglePassword() {
-		var input = document.getElementById('password');
-		var icon = document.querySelector('.toggle-password i');
-		if (!input) return;
-		if (input.type === 'password') {
-			input.type = 'text';
-			if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
-		} else {
-			input.type = 'password';
-			if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
-		}
-	}
-	</script>
+    <script src="script.js"></script>
+    <script>
+        // Form submission
+        const loginForm = document.querySelector('.login-form');
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (!username || !password) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Here you would typically send the data to your server
+            console.log('Login attempt:', { username, password });
+            alert('Login functionality would be implemented here.');
+        });
+
+
+    </script>
 </body>
 </html> 
